@@ -4,6 +4,9 @@ import java.io.Console;
 import java.io.PrintStream;
 import java.util.Scanner;
 
+import vn.com.ntqs.demo.calc_implement.Add;
+import vn.com.ntqs.demo.calc_implement.Sub;
+
 public class Main {
 
 	private static PrintStream log = System.out;
@@ -16,15 +19,18 @@ public class Main {
 		
 		String operation = cs.nextLine();
 		if (operation.equals("+")) {
-			doAdd();
+			Add addInst = new Add();
+			addInst.takeAction();
 		} else if (operation.equals("-")) {
-			doSub();
+			Sub subInst = new Sub();
+			subInst.takeAction();
 		} else {
 			log.println("Not supported!");
 		}
 		
 	}
 	
+	@Deprecated
 	public static void doAdd() {
 		log.println("Enter 1st number:");
 		String num1 = cs.nextLine();
@@ -34,6 +40,7 @@ public class Main {
 		log.format("The ADD result: %s + %s = %d", num1, num2, Integer.parseInt(num1) + Integer.parseInt(num2));
 	}
 	
+	@Deprecated
 	public static void doSub() {
 		log.println("Enter 1st number:");
 		String num1 = cs.nextLine();
