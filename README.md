@@ -1,3 +1,3 @@
 # About
 
-A demo project about DI (IoC)
+A demo project about IoC
